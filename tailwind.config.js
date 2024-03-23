@@ -1,7 +1,7 @@
 /* eslint-disable global-require */
 import {
     BREAKPOINTS, COLORS, FONT_FAMILY, FONT_SIZE, LINE_HEIGHT, SPACING, ZINDEX,
-} from './core/theme/vars';
+} from './src/theme/vars';
 
 const plugin = require('tailwindcss/plugin');
 
@@ -32,18 +32,19 @@ module.exports = {
                     link_hover: 'var(--color-pwa-link_hover_color)',
                     button_text: 'var(--color-pwa-button_text_color)',
                     button_text_hover: 'var(--color-pwa-button_text_hover_color)',
-                    button_background: 'var(--color-pwa-button_background_color)',
-                    button_background_hover: 'var(--color-pwa-button_background_hover_color)',
+                    button_background: COLORS.primary[500],
+                    button_background_hover: COLORS.primary[400],
                     button_border: 'var(--color-pwa-button_border_color)',
                     button_border_hover: 'var(--color-pwa-button_border_hover_color)',
-                    button_disabled_text: 'var(--color-pwa-button_disabled_text_color)',
-                    button_disabled_background: 'var(--color-pwa-button_disabled_background_color)',
+                    button_disabled_text: COLORS.neutral[50],
+                    button_disabled_background: COLORS.neutral[100],
                     badge: COLORS.badge,
                 },
                 // END store config value
                 primary: COLORS.primary,
                 secondary: COLORS.secondary,
                 neutral: COLORS.neutral,
+                baseblack: COLORS.base.black,
             },
             lineHeight: LINE_HEIGHT,
             fontSize: FONT_SIZE,
